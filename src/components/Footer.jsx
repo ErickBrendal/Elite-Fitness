@@ -25,9 +25,9 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-pink-400 mb-4">Elite Fitness</h3>
+            <h3 className="text-2xl font-bold text-pink-400 mb-4">Personal Brenda</h3>
             <p className="text-gray-300 mb-6">
-              Transformando vidas através de um treinamento premium e personalizado. 
+              Transformando corpos e vidas através de um treinamento premium e personalizado. 
               Sua jornada para a excelência física começa aqui.
             </p>
             <div className="flex space-x-4">
@@ -57,20 +57,29 @@ export default function Footer() {
           >
             <h4 className="text-xl font-semibold mb-4">Contato</h4>
             <div className="space-y-3">
-              {contactInfo.map((contact, index) => (
-                <motion.a
-                  key={index}
-                  href={contact.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-pink-400 transition-colors duration-300"
-                >
-                  <contact.icon className="h-4 w-4" />
-                  <span>{contact.text}</span>
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://wa.me/5511954004713"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-3 text-gray-300 hover:text-pink-400 transition-colors duration-300"
+              >
+                <Phone className="h-4 w-4" />
+                <span>(11) 95400-4713</span>
+              </motion.a>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-3 text-gray-300"
+              >
+                <MapPin className="h-4 w-4" />
+                <span>São Paulo, SP</span>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -107,7 +116,7 @@ export default function Footer() {
           className="border-t border-gray-800 mt-8 pt-8 text-center"
         >
           <p className="text-gray-400">
-            © 2024 Elite Fitness. Todos os direitos reservados. Desenvolvido com 💪 para mulheres que exigem o máximo.
+            © 2025 Personal Brenda. Todos os direitos reservados. Desenvolvido com 💪 por <a href="https://erick-almeida-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors">@erickalmeida</a> para mulheres que exigem o máximo.
           </p>
         </motion.div>
       </div>

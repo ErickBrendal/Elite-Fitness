@@ -23,7 +23,7 @@ export default function Navigation() {
             className="flex items-center space-x-2"
           >
             <Dumbbell className="h-8 w-8 text-pink-500" />
-            <span className="text-xl font-bold text-white">Elite Fitness</span>
+            <span className="text-xl font-bold text-white">Personal Brenda</span>
           </motion.div>
 
           {/* Desktop Navigation */}

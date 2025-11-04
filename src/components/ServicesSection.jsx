@@ -86,12 +86,14 @@ export default function ServicesSection() {
               </ul>
               
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-4">
-                  {service.price}
-                </div>
-                <button className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                  Escolher Plano
-                </button>
+                <a
+                  href="https://wa.me/5511954004713?text=Olá%20Brenda!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20${service.title}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300"
+                >
+                  Consulte Aqui
+                </a>
               </div>
             </motion.div>
           ))}

@@ -20,9 +20,9 @@ export default function SmartBookingCTA() {
       alert('Escolha uma data e horário para continuar.');
       return;
     }
-    alert(
-      `Sua sessão foi solicitada para ${selectedDate} às ${selectedHour}. Em breve, um e-mail de confirmação será enviado!`
-    );
+    const message = `Olá Brenda! Gostaria de agendar uma sessão para ${selectedDate} às ${selectedHour}.`;
+    const whatsappUrl = `https://wa.me/5511954004713?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -82,9 +82,9 @@ export default function SmartBookingCTA() {
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
             onClick={handleBooking}
-            className="w-full px-8 py-4 bg-black hover:bg-gray-900 text-pink-400 font-bold rounded-full shadow-lg transition-all duration-300"
+            className="w-full px-8 py-4 bg-pink-500 hover:bg-pink-600 text-white font-bold rounded-full shadow-lg transition-all duration-300"
           >
-            CONFIRMAR RESERVA
+            CONFIRMAR VIA WHATSAPP
           </motion.button>
         </div>
 
